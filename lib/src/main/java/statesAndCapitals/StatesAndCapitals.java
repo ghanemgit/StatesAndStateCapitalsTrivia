@@ -183,7 +183,7 @@ public class StatesAndCapitals
         // Use sorted() and map()
 
         List<String> stateTreesSortedAscending =  states.stream().
-                map(stateInfo -> stateInfo.getStateTree()).sorted().collect(toList());
+                map(StateInfo::getStateTree).sorted().collect(toList());
 
         testResults.put("A21", StatesAndCapitalsCheck.adv21(stateTreesSortedAscending));
 
